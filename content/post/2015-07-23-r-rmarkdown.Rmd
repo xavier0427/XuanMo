@@ -1,0 +1,53 @@
+---
+title: "Novel Coronavirus is intractable, should reduce close cutests to prevent outbreaks"
+author: "Xuanmo Wang"
+date: 2015-07-23T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+
+# Young people between the ages of 20 and 29 have the highest number of infections
+As the distribution provided here, the graph follows a right-skewed distribution and it does not looks like a symmetric distribution. The bins shows that most of the people who get infected is the age group around 20 and 29 years old. These people got highest number of infecting by the virus.
+```{r}
+####Instal Data
+
+library(opendatatoronto)
+library(dplyr)
+
+# get package
+package <- show_package("64b54586-6180-4485-83eb-81e8fae3b8fe")
+package
+
+# get all resources for this package
+resources <- list_package_resources("64b54586-6180-4485-83eb-81e8fae3b8fe")
+
+# identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources
+datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+
+# load the first datastore resource as a sample
+DATA <- filter(datastore_resources, row_number()==1) %>% get_resource()
+DATA
+glimpse(DATA)
+library(tidyverse)
+
+Episode.Date=DATA$`Episode Date`
+Age.Group=DATA$`Age Group`
+Source.of.Infection=DATA$`Source of Infection`
+
+ggplot(data=DATA, aes(x = Age.Group)) + geom_histogram(color=5, fill='blue', bins = 10, stat = 'count')
+```
+
+
+
+
+# The Ways Of Getting Infected
+There are many ways of getting infection by the virus, such as getting close contact, or spears by the community, healthcare issues, institutional facts … etc. Let’s illustrate the reasons and find some trend of getting infection.
+```{r}
+ggplot(data=DATA, aes(x = Source.of.Infection)) + geom_histogram(color=83, fill='green', bins = 10, stat = 'count')
+```
+As the graph shows, the thing that we can see clearly is the the close contact and the outbreak associated becomes plays the majority of ways of getting infected. The two ways have around 6000 of people separately. There are also many people get infected by the other reason of community as around 2500 people. The graph is not symmetric either does not like to be following a normal distribution.
