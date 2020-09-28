@@ -10,6 +10,21 @@ tags: ["R Markdown", "plot", "regression"]
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
+# Abstract
+
+The virus of COVID19 speared in a high spearing rate recently, the data from the opendatatoronto data  base is to illustrate the distribution of the virus spearing in Toronto among the age groups and ways of getting infected.
+
+# Variables of Data
+
+Source of Infection 
+The most likely way that sporadic cases acquired their COVID-19 infection. Only the most likely exposure for each case is reported. Exposures that occurred up to 14 days before symptoms start are potential acquisition sources, and can include: Travel:Travel outside of Ontario.
+Close contact with a case: Was in close contact with a confirmed or probable COVID-19 case (e.g., reside in the same household).
+Institutional setting: Institutional settings includes, but not limited to: long-term care homes, acute care hospitals, complex case hospitals, special care facilities, retirement homes, rehabilitation hospitals.
+Healthcare setting: Healthcare settings includes, but not limited to: family physician, dentist, ophthalmologist, sports doctor.
+Community: Cases with no reported travel outside of Ontario, no known close contact with a COVID-19 case, and no reported infection acquired in an institutional or healthcare setting.
+Pending Information on source of infection pending.
+Unknown/missing Source of infection not identified or missing.
+N/A: Outbreak-associated cases.
 
 # Young people between the ages of 20 and 29 have the highest number of infections
 About the COVID19, there are big amount of people were getting infected by the virus. The age groups were from 19 years old to 90 years old. Here is a set of data by using histogram to provide the distribution of the age group
@@ -51,6 +66,11 @@ There are many ways of getting infection by the virus, such as getting close con
 ggplot(data=DATA, aes(x = Source.of.Infection)) + geom_histogram(color=83, fill='green', bins = 10, stat = 'count')
 ```
 As the graph shows, the thing that we can see clearly is the the close contact and the outbreak associated becomes plays the majority of ways of getting infected. The two ways have around 6000 of people separately. There are also many people get infected by the other reason of community as around 2500 people. The graph is not symmetric either does not like to be following a normal distribution.
+
+
+# Conclusion
+
+In conclusion, the people in the age group around 19 to 29 should be aware of the COVID19 because it is the group that many of them getting infected. The majority way of getting infected is by outbreak and Close contact with a case.
 
 #Reference
 
