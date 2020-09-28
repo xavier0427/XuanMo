@@ -1,11 +1,78 @@
----
-title: "Novel Coronavirus is intractable, should reduce close cutests to prevent outbreaks"
-author: "Xuanmo Wang"
-date: 2020-09-27T21:13:14-05:00
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
----
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
 
+
+<title>Novel Coronavirus is intractable, should reduce close cutests to prevent outbreaks - A Hugo website</title>
+<meta property="og:title" content="Novel Coronavirus is intractable, should reduce close cutests to prevent outbreaks - A Hugo website">
+
+
+  <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">4 min read</span>
+    
+
+    <h1 class="article-title">Novel Coronavirus is intractable, should reduce close cutests to prevent outbreaks</h1>
+
+    
+    <span class="article-date">2020-09-27</span>
+    
+
+    <div class="article-content">
+      
 
 
 <div id="young-people-between-the-ages-of-20-and-29-have-the-highest-number-of-infections" class="section level1">
@@ -97,13 +164,57 @@ Source.of.Infection=DATA$`Source of Infection`
 
 ggplot(data=DATA, aes(x = Age.Group)) + geom_histogram(color=5, fill=&#39;blue&#39;, bins = 10, stat = &#39;count&#39;)
 ## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
 <div id="the-ways-of-getting-infected" class="section level1">
 <h1>The Ways Of Getting Infected</h1>
 <p>There are many ways of getting infection by the virus, such as getting close contact, or spears by the community, healthcare issues, institutional facts … etc. Let’s illustrate the reasons and find some trend of getting infection.</p>
 <pre class="r"><code>ggplot(data=DATA, aes(x = Source.of.Infection)) + geom_histogram(color=83, fill=&#39;green&#39;, bins = 10, stat = &#39;count&#39;)
 ## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 As the graph shows, the thing that we can see clearly is the the close contact and the outbreak associated becomes plays the majority of ways of getting infected. The two ways have around 6000 of people separately. There are also many people get infected by the other reason of community as around 2500 people. The graph is not symmetric either does not like to be following a normal distribution.</p>
 </div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="../../../../js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

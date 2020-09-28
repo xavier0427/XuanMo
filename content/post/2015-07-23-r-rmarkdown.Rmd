@@ -1,7 +1,7 @@
 ---
 title: "Novel Coronavirus is intractable, should reduce close cutests to prevent outbreaks"
 author: "Xuanmo Wang"
-date: 2015-07-23T21:13:14-05:00
+date: 2020-09-27T21:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
@@ -51,3 +51,4 @@ There are many ways of getting infection by the virus, such as getting close con
 ggplot(data=DATA, aes(x = Source.of.Infection)) + geom_histogram(color=83, fill='green', bins = 10, stat = 'count')
 ```
 As the graph shows, the thing that we can see clearly is the the close contact and the outbreak associated becomes plays the majority of ways of getting infected. The two ways have around 6000 of people separately. There are also many people get infected by the other reason of community as around 2500 people. The graph is not symmetric either does not like to be following a normal distribution.
+
