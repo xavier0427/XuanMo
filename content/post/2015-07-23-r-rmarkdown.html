@@ -10,7 +10,7 @@ tags: ["R Markdown", "plot", "regression"]
 
 <div id="young-people-between-the-ages-of-20-and-29-have-the-highest-number-of-infections" class="section level1">
 <h1>Young people between the ages of 20 and 29 have the highest number of infections</h1>
-<p>As the distribution provided here, the graph follows a right-skewed distribution and it does not looks like a symmetric distribution. The bins shows that most of the people who get infected is the age group around 20 and 29 years old. These people got highest number of infecting by the virus.</p>
+<p>About the COVID19, there are big amount of people were getting infected by the virus. The age groups were from 19 years old to 90 years old. Here is a set of data by using histogram to provide the distribution of the age group</p>
 <pre class="r"><code>####Instal Data
 
 library(opendatatoronto)
@@ -97,7 +97,8 @@ Source.of.Infection=DATA$`Source of Infection`
 
 ggplot(data=DATA, aes(x = Age.Group)) + geom_histogram(color=5, fill=&#39;blue&#39;, bins = 10, stat = &#39;count&#39;)
 ## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+As the distribution provided here, the graph follows a right-skewed distribution and it does not looks like a symmetric distribution. The bins shows that most of the people who get infected is the age group around 20 and 29 years old. These people got highest number of infecting by the virus.</p>
 </div>
 <div id="the-ways-of-getting-infected" class="section level1">
 <h1>The Ways Of Getting Infected</h1>
@@ -106,4 +107,6 @@ ggplot(data=DATA, aes(x = Age.Group)) + geom_histogram(color=5, fill=&#39;blue&#
 ## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
 <p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 As the graph shows, the thing that we can see clearly is the the close contact and the outbreak associated becomes plays the majority of ways of getting infected. The two ways have around 6000 of people separately. There are also many people get infected by the other reason of community as around 2500 people. The graph is not symmetric either does not like to be following a normal distribution.</p>
+<p>#Reference</p>
+<p>Opendata:<a href="https://open.toronto.ca/dataset/covid-19-cases-in-toronto/" class="uri">https://open.toronto.ca/dataset/covid-19-cases-in-toronto/</a></p>
 </div>
